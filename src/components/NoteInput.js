@@ -10,13 +10,21 @@ class NoteInput extends React.Component {
     };
 
     this.onSubmitHandler = this.onSubmitHandler.bind(this);
-    this.onInputChangeHandler = this.onInputChangeHandler.bind(this);
+    this.onTitleChangeHandler = this.onTitleChangeHandler.bind(this);
+    this.onBodyChangeHandler = this.onBodyChangeHandler.bind(this);
   }
 
-  onInputChangeHandler(e) {
+  onTitleChangeHandler(e) {
     this.setState((prevState) => ({
       ...prevState,
-      [e.target.name]: e.target.value,
+      title: e.target.value.slice(0, 50),
+    }));
+  }
+
+  onBodyChangeHandler(e) {
+    this.setState((prevState) => ({
+      ...prevState,
+      body: e.target.value,
     }));
   }
 
@@ -37,12 +45,12 @@ class NoteInput extends React.Component {
           <p className="note-input__title__char-limit">
             {`Sisa karakter: ${50 - this.state.title.length}`}
           </p>
-          <input className="note-input__title" type="text" name="title"
+          <input className="note-input__title" type="text"
             placeholder="Judul catatan" value={this.state.title}
-            onChange={this.onInputChangeHandler} required />
-          <textarea className="note-input__body" type="text" name="body"
+            onChange={this.onTitleChangeHandler} required />
+          <textarea className="note-input__body" type="text"
             placeholder="Isi catatan" value={this.state.body}
-            onChange={this.onInputChangeHandler} required />
+            onChange={this.onBodyChangeHandler} required />
           <button type="submit">Tambah</button>
         </form>
       </div>
