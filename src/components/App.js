@@ -12,6 +12,7 @@ class App extends React.Component {
 
     this.onDeleteHandler = this.onDeleteHandler.bind(this);
     this.onArchiveHandler = this.onArchiveHandler.bind(this);
+    this.onAddHandler = this.onAddHandler.bind(this);
   }
 
   onDeleteHandler(id) {
@@ -32,12 +33,27 @@ class App extends React.Component {
     }));
   }
 
+  onAddHandler({title, body}) {
+    const createdAt = new Date();
+
+    this.setState((prevState) => ({
+      notes: [...prevState.notes, {
+        id: +createdAt,
+        title,
+        body,
+        createdAt: createdAt.toISOString(),
+        archived: false,
+      }],
+    }));
+  }
+
   render() {
     return (
       <div className="App">
         <AppBody notes={this.state.notes}
           onDelete={this.onDeleteHandler}
-          onArchive={this.onArchiveHandler}/>
+          onArchive={this.onArchiveHandler}
+          onAddNote={this.onAddHandler}/>
       </div>
     );
   }
