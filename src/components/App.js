@@ -59,7 +59,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">
+      <>
         <AppHeader onSearchNotes={this.onSearchHandler} />
         <AppBody notes={this.state.keyword.length === 0 ?
           this.state.notes :
@@ -70,7 +70,7 @@ class App extends React.Component {
         onDelete={this.onDeleteHandler}
         onArchive={this.onArchiveHandler}
         onAddNote={this.onAddHandler}/>
-      </div>
+      </>
     );
   }
 }
