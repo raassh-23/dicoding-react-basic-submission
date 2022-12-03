@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/dicoding-android-expert-submission/static/css/main.383860b4.css",
-    "main.js": "/dicoding-android-expert-submission/static/js/main.284ba9aa.js",
-    "index.html": "/dicoding-android-expert-submission/index.html",
-    "main.383860b4.css.map": "/dicoding-android-expert-submission/static/css/main.383860b4.css.map",
-    "main.284ba9aa.js.map": "/dicoding-android-expert-submission/static/js/main.284ba9aa.js.map"
+    "main.css": "/dicoding-react-basic-submission/static/css/main.383860b4.css",
+    "main.js": "/dicoding-react-basic-submission/static/js/main.284ba9aa.js",
+    "index.html": "/dicoding-react-basic-submission/index.html",
+    "main.383860b4.css.map": "/dicoding-react-basic-submission/static/css/main.383860b4.css.map",
+    "main.284ba9aa.js.map": "/dicoding-react-basic-submission/static/js/main.284ba9aa.js.map"
   },
   "entrypoints": [
     "static/css/main.383860b4.css",
